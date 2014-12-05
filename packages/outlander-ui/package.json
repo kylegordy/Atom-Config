@@ -1,0 +1,36 @@
+{
+  "name": "outlander-ui",
+  "theme": "ui",
+  "version": "0.3.0",
+  "description": "A dark flat theme from elsewhere",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mthadley/outlander-ui"
+  },
+  "engines": {
+    "atom": ">0.40.0"
+  },
+  "readme": "# Outlander\n\nOutlander is a dark, flat UI theme for [Atom](https://atom.io/).\n\n![screenshot.png](https://raw.githubusercontent.com/mthadley/outlander-ui/master/screenshot.png)\n\nBest used with [Outlander-Syntax](https://github.com/mthadley/outlander-syntax).\n\n## Installation\nRun the following in a terminal:\n```sh\n$ apm install outlander-ui outlander-syntax\n```\nAlternatively, the theme can be installed from the settings menu at **_preferences -> themes_**, from where the theme itself can also be applied.\n\n## Credits\n* Outlander colors based on the [Tomorrow-Night-Eighties](https://github.com/ChrisKempson/Tomorrow-Theme) color scheme by @chriskempson\n\n### Inspiration\n\n* Its no coincidence that Outlander plays nice with [Numix](https://numixproject.org/)\n* [Light Table](http://www.lighttable.com/)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/mthadley/outlander-ui/issues"
+  },
+  "homepage": "https://github.com/mthadley/outlander-ui",
+  "_id": "outlander-ui@0.3.0",
+  "dist": {
+    "shasum": "ffd51be606fba77a37902ab61e4ee7e6761efb5d"
+  },
+  "_resolved": "/private/var/folders/9j/zt1j40ld40gdzz7pm1hkn6br0000gn/T/d-114114-24720-1tawgpr/package.tgz",
+  "_from": "/private/var/folders/9j/zt1j40ld40gdzz7pm1hkn6br0000gn/T/d-114114-24720-1tawgpr/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

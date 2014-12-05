@@ -1,0 +1,17 @@
+'global':
+  'editor':
+    'showIndentGuide': true
+    'showInvisibles': true
+    'lineHeight': 1.55
+    'invisibles': {}
+  'core':
+    'themes': [
+      'outlander-ui'
+      'outlander-syntax'
+    ]
+  'exception-reporting':
+    'userId': '4ff6a64d-7478-97d6-028f-cb85011b20fa'
+  'welcome':
+    'showOnStartup': false
+  'whitespace':
+    'ignoreWhitespaceOnCurrentLine': false

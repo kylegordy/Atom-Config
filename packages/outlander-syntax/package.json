@@ -1,0 +1,36 @@
+{
+  "name": "outlander-syntax",
+  "theme": "syntax",
+  "version": "0.4.0",
+  "description": "A dark syntax theme from elsewhere",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mthadley/outlander-syntax"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readme": "# Outlander Syntax\n\nOutlander is a syntax theme for [Atom](https://atom.io/). This theme is an almost clone of the [Tomorrow Night Eighties](https://github.com/ChrisKempson/Tomorrow-Theme) color scheme by @chriskempson, save for a few tweaks to keep it inline with [Outlander-ui](https://github.com/mthadley/outlander-UI).\n\n![Screenshot](https://raw.githubusercontent.com/mthadley/outlander-syntax/master/screenshot.png)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/mthadley/outlander-syntax/issues"
+  },
+  "homepage": "https://github.com/mthadley/outlander-syntax",
+  "_id": "outlander-syntax@0.4.0",
+  "dist": {
+    "shasum": "d6eac1a9a0dc10d6193b07c1dd0e28c30d1f4723"
+  },
+  "_resolved": "/private/var/folders/9j/zt1j40ld40gdzz7pm1hkn6br0000gn/T/d-114114-24732-1nuizou/package.tgz",
+  "_from": "/private/var/folders/9j/zt1j40ld40gdzz7pm1hkn6br0000gn/T/d-114114-24732-1nuizou/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
