@@ -1,11 +1,11 @@
 {
   "name": "jshint",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Validate JavaScript with JSHint. In realtime or on save. Supports JSX (React).",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sindresorhus/atom-jshint"
+    "url": "https://github.com/sindresorhus/atom-jshint"
   },
   "private": true,
   "author": {
@@ -14,12 +14,12 @@
     "url": "http://sindresorhus.com"
   },
   "engines": {
-    "atom": ">=0.135.0"
+    "atom": ">=0.174.0"
   },
   "dependencies": {
     "emissary": "^1.0.0",
     "jshint": "^2.4.4",
-    "jshint-jsx": "^0.2.0",
+    "jshint-jsx": "^0.4.0",
     "lazy-req": "^1.0.0",
     "lodash": "^2.4.1",
     "react-dom-pragma": "^1.0.0",
@@ -33,12 +33,10 @@
     "url": "https://github.com/sindresorhus/atom-jshint/issues"
   },
   "homepage": "https://github.com/sindresorhus/atom-jshint",
-  "_id": "jshint@1.1.2",
-  "dist": {
-    "shasum": "ec680b0e76a217dac603082a934f6b24d8497c9e"
-  },
-  "_resolved": "/private/var/folders/9j/zt1j40ld40gdzz7pm1hkn6br0000gn/T/d-114115-44946-j2cig5/package.tgz",
-  "_from": "/private/var/folders/9j/zt1j40ld40gdzz7pm1hkn6br0000gn/T/d-114115-44946-j2cig5/package.tgz",
+  "_id": "jshint@1.2.0",
+  "_shasum": "c37fca8bb839108d461e71942496d4d90251d57a",
+  "_resolved": "file:../d-115030-51271-1ov4y6m/package.tgz",
+  "_from": "../d-115030-51271-1ov4y6m/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -69,7 +67,7 @@
       },
       {
         "name": "underscore-plus",
-        "version": "1.6.1",
+        "version": "1.6.6",
         "path": "node_modules/emissary/node_modules/underscore-plus/lib/underscore-plus.js"
       },
       {
@@ -79,7 +77,7 @@
       },
       {
         "name": "jshint",
-        "version": "2.5.10",
+        "version": "2.6.0",
         "path": "node_modules/jshint/src/jshint.js"
       },
       {
@@ -199,12 +197,12 @@
       },
       {
         "name": "jshint-jsx",
-        "version": "0.2.0",
+        "version": "0.4.1",
         "path": "node_modules/jshint-jsx/index.js"
       },
       {
         "name": "react-tools",
-        "version": "0.12.1",
+        "version": "0.12.2",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/main.js"
       },
       {
@@ -214,7 +212,7 @@
       },
       {
         "name": "commander",
-        "version": "2.5.0",
+        "version": "2.5.1",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/commander/index.js"
       },
       {
@@ -269,7 +267,7 @@
       },
       {
         "name": "iconv-lite",
-        "version": "0.4.5",
+        "version": "0.4.6",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/iconv-lite/lib/index.js"
       },
       {
@@ -299,22 +297,22 @@
       },
       {
         "name": "recast",
-        "version": "0.9.8",
+        "version": "0.9.15",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/main.js"
       },
       {
         "name": "ast-types",
-        "version": "0.6.6",
+        "version": "0.6.10",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/main.js"
       },
       {
         "name": "esprima-fb",
-        "version": "8001.1001.0-dev-harmony-fb",
+        "version": "10001.1.0-dev-harmony-fb",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/esprima-fb/esprima.js"
       },
       {
         "name": "source-map",
-        "version": "0.1.40",
+        "version": "0.1.43",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map.js"
       },
       {
@@ -355,7 +353,7 @@
       {
         "name": "lodash",
         "version": "2.4.1",
-        "path": "node_modules/lodash/lodash.js"
+        "path": "node_modules/lodash/dist/lodash.js"
       },
       {
         "name": "react-dom-pragma",
@@ -384,7 +382,7 @@
       },
       {
         "name": "user-home",
-        "version": "1.1.0",
+        "version": "1.1.1",
         "path": "node_modules/user-home/index.js"
       }
     ],
@@ -490,12 +488,15 @@
         "node_modules/jshint/src/jshint.js",
         "node_modules/jshint/src/lex.js",
         "node_modules/jshint/src/messages.js",
+        "node_modules/jshint/src/name-stack.js",
+        "node_modules/jshint/src/options.js",
         "node_modules/jshint/src/platforms/rhino.js",
         "node_modules/jshint/src/reg.js",
         "node_modules/jshint/src/reporters/checkstyle.js",
         "node_modules/jshint/src/reporters/default.js",
         "node_modules/jshint/src/reporters/jslint_xml.js",
         "node_modules/jshint/src/reporters/non_error.js",
+        "node_modules/jshint/src/reporters/unix.js",
         "node_modules/jshint/src/state.js",
         "node_modules/jshint/src/style.js",
         "node_modules/jshint/src/vars.js",
@@ -554,6 +555,7 @@
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/q/q.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/q/queue.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/lib/comments.js",
+        "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/lib/fast-path.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/lib/lines.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/lib/mapping.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/lib/options.js",
@@ -590,6 +592,7 @@
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/base64-vlq.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/base64.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/binary-search.js",
+        "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/mapping-list.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/source-map-consumer.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/source-map-generator.js",
         "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/source-map/lib/source-map/source-node.js",
@@ -910,6 +913,12 @@
         "node_modules/jshint-jsx/node_modules/react-tools/vendor/fbtransform/transforms/xjs.js",
         "node_modules/jshint-jsx/node_modules/react-tools/vendor/fbtransform/visitors.js",
         "node_modules/lazy-req/index.js",
+        "node_modules/lodash/dist/lodash.compat.js",
+        "node_modules/lodash/dist/lodash.compat.min.js",
+        "node_modules/lodash/dist/lodash.js",
+        "node_modules/lodash/dist/lodash.min.js",
+        "node_modules/lodash/dist/lodash.underscore.js",
+        "node_modules/lodash/dist/lodash.underscore.min.js",
         "node_modules/lodash/lodash.js",
         "node_modules/react-dom-pragma/index.js",
         "node_modules/react-dom-pragma/node_modules/has-jsx-pragma/index.js",
@@ -1051,7 +1060,7 @@
         "dependencies": {
           "emissary": "^1.0.0",
           "jshint": "^2.4.4",
-          "jshint-jsx": "^0.2.0",
+          "jshint-jsx": "^0.4.0",
           "lazy-req": "^1.0.0",
           "lodash": "^2.4.1",
           "react-dom-pragma": "^1.0.0",
@@ -1344,7 +1353,7 @@
           "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast"
         ],
         "dependencies": {
-          "esprima-fb": "~8001.1001.0-dev-harmony-fb",
+          "esprima-fb": "~10001.1.0-dev-harmony-fb",
           "source-map": "~0.1.40",
           "private": "~0.1.5",
           "ast-types": "~0.6.1"
