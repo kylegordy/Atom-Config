@@ -15,3 +15,4 @@
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+  emmet: {}
