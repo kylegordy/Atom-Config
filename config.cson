@@ -1,12 +1,11 @@
 "*":
   editor:
     lineHeight: 1.55
-    showInvisibles: true
     showIndentGuide: true
     invisibles: {}
   core:
     themes: [
-      "outlander-ui"
+      "atom-dark-ui"
       "outlander-syntax"
     ]
   "exception-reporting":
@@ -16,3 +15,5 @@
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
   emmet: {}
+  "webbox-color":
+    fillColorAsBackground: false
