@@ -23,6 +23,14 @@ var SUPPORTED_GRAMMARS = [
 	'source.js.jsx'
 ];
 
+var jsHintStatusBar = document.createElement('span');
+jsHintStatusBar.setAttribute('id', 'jshint-statusbar');
+jsHintStatusBar.classList.add('inline-block');
+
+function updateStatusText(line, character, reason) {
+	jsHintStatusBar.textContent = line && character && reason ? 'JSHint ' + line + ':' + character + ' ' + reason : '';
+}
+
 function getMarkersForEditor() {
 	var editor = atom.workspace.getActiveTextEditor();
 
@@ -92,21 +100,21 @@ function updateStatusbar() {
 		return;
 	}
 
-	var jsHintStatusBar = statusBar.querySelector('#jshint-statusbar');
-	if (jsHintStatusBar && jsHintStatusBar.parentNode) {
-		jsHintStatusBar.parentNode.removeChild(jsHintStatusBar);
+	if (!jsHintStatusBar.parentNode) {
+		statusBar.addLeftTile({item: jsHintStatusBar});
 	}
 
 	var editor = atom.workspace.getActiveTextEditor();
 	if (!editor || !errorsByEditorId[editor.id]) {
+		updateStatusText();
 		return;
 	}
 
-	var line = editor.getCursorBufferPosition().row+1;
+	var line = editor.getCursorBufferPosition().row + 1;
 	var error = errorsByEditorId[editor.id][line] || _.first(_.compact(errorsByEditorId[editor.id]));
 	error = error[0];
 
-	statusBar.appendLeft('<span id="jshint-statusbar" class="inline-block">JSHint ' + error.line + ':' + error.character + ' ' + error.reason + '</span>');
+	updateStatusText(error.line, error.character, error.reason);
 }
 
 function getRowForError(error) {
@@ -125,7 +133,7 @@ function displayError(error) {
 	var editor = atom.workspace.getActiveTextEditor();
 	var marker = editor.markBufferRange([[row, 0], [row, 1]]);
 	editor.decorateMarker(marker, {type: 'line', class: 'jshint-line'});
-	editor.decorateMarker(marker, {type: 'gutter', class: 'jshint-line-number'});
+	editor.decorateMarker(marker, {type: 'line-number', class: 'jshint-line-number'});
 	saveMarker(marker, row);
 	addReasons(marker, error);
 }
@@ -139,7 +147,7 @@ function getReasonsForError(error) {
 function addReasons(marker, error) {
 	var row = getRowForError(error);
 	var editorElement = atom.views.getView(atom.workspace.getActiveTextEditor());
-	var reasons = '<div class="jshint-errors">' + getReasonsForError(error).join('<br />') + '</div>';
+	var reasons = '<div class="jshint-errors">' + getReasonsForError(error).join('<br>') + '</div>';
 
 	var target = editorElement.shadowRoot.querySelectorAll('.jshint-line-number.line-number-' + row);
 	var tooltip = atom.tooltips.add(target, {
@@ -161,7 +169,7 @@ function lint() {
 		return;
 	}
 
-	var file = editor.getUri();
+	var file = editor.getURI();
 
 	// Hack to make JSHint look for .jshintignore in the correct dir
 	// Because JSHint doesn't use its `cwd` option
@@ -242,7 +250,7 @@ function registerEvents() {
 	lint();
 	var workspaceElement = atom.views.getView(atom.workspace);
 
-	atom.workspace.eachEditor(function (editor) {
+	atom.workspace.observeTextEditors(function (editor) {
 		var buffer = editor.getBuffer();
 		var events = 'saved contents-modified';
 
@@ -253,7 +261,7 @@ function registerEvents() {
 			events = 'saved';
 		}
 
-		editor.on('scroll-top-changed', _.debounce(displayErrors, 200));
+		editor.onDidChangeScrollTop(_.debounce(displayErrors, 200));
 
 		plugin.subscribe(buffer, events, _.debounce(lint, 50));
 	});
