@@ -1,7 +1,7 @@
 {
   "name": "outlander-ui",
   "theme": "ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A dark flat theme from elsewhere",
   "license": "MIT",
   "repository": {
@@ -17,10 +17,10 @@
     "url": "https://github.com/mthadley/outlander-ui/issues"
   },
   "homepage": "https://github.com/mthadley/outlander-ui",
-  "_id": "outlander-ui@1.0.1",
-  "_shasum": "f245770c4a870828bf77ed1a8967acb65f7b3830",
-  "_resolved": "file:../d-115030-51280-gtz5rn/package.tgz",
-  "_from": "../d-115030-51280-gtz5rn/package.tgz",
+  "_id": "outlander-ui@1.0.2",
+  "_shasum": "7608884023f85b5835c3dacbdf0eef1713938047",
+  "_resolved": "file:../d-115321-90650-1lhnlwx/package.tgz",
+  "_from": "../d-115321-90650-1lhnlwx/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],
