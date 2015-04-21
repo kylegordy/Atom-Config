@@ -3,6 +3,7 @@
     lineHeight: 1.55
     showIndentGuide: true
     invisibles: {}
+    softWrap: true
   core:
     themes: [
       "atom-dark-ui"
