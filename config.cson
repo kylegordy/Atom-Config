@@ -2,7 +2,8 @@
   editor:
     lineHeight: 1.55
     showIndentGuide: true
-    invisibles: {}
+    invisibles:
+      {}
     softWrap: true
   core:
     themes: [
@@ -15,6 +16,7 @@
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
-  emmet: {}
+  emmet:
+    {}
   "webbox-color":
     fillColorAsBackground: false
