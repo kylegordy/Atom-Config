@@ -10,6 +10,9 @@
       "atom-dark-ui"
       "outlander-syntax"
     ]
+    disabledPackages: [
+      "whitespace"
+    ]
   "exception-reporting":
     userId: "4ff6a64d-7478-97d6-028f-cb85011b20fa"
   welcome:
