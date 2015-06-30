@@ -6,6 +6,10 @@
 
 atom-workspace {
 	background-color: @app-background-color;
+
+	&[outlander-visible-modal$="true"] atom-workspace-axis {
+		-webkit-filter: blur(2px);
+	}
 }
 
 .scrollbars-visible-always {
@@ -28,5 +32,10 @@ atom-workspace {
 
 	/deep/ ::-webkit-scrollbar-thumb {
 		background: @scrollbar-color;
+		border: 3px solid @scrollbar-background-color;
+
+		&:active {
+			border-width: 0;
+		}
 	}
 }

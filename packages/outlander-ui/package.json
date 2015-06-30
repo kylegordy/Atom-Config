@@ -1,9 +1,10 @@
 {
   "name": "outlander-ui",
   "theme": "ui",
-  "version": "1.0.2",
+  "version": "1.2.1",
   "description": "A dark flat theme from elsewhere",
   "license": "MIT",
+  "main": "lib/outlander",
   "repository": {
     "type": "git",
     "url": "https://github.com/mthadley/outlander-ui"
@@ -17,14 +18,18 @@
     "url": "https://github.com/mthadley/outlander-ui/issues"
   },
   "homepage": "https://github.com/mthadley/outlander-ui",
-  "_id": "outlander-ui@1.0.2",
-  "_shasum": "7608884023f85b5835c3dacbdf0eef1713938047",
-  "_resolved": "file:../d-115321-90650-1lhnlwx/package.tgz",
-  "_from": "../d-115321-90650-1lhnlwx/package.tgz",
+  "_id": "outlander-ui@1.2.1",
+  "_shasum": "6103ce0753c8499fa92e6a7a68ff9d36d6d2de77",
+  "_resolved": "file:../d-115530-45451-17spk4y/package.tgz",
+  "_from": "../d-115530-45451-17spk4y/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],
     "extensions": {
+      ".coffee": [
+        "lib/ModalHandler.coffee",
+        "lib/outlander.coffee"
+      ],
       ".json": [
         "package.json"
       ]
