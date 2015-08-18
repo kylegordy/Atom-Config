@@ -1,7 +1,7 @@
 {
   "name": "webbox-color",
   "main": "./lib/color",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "Simple CSS color viewer for Atom, automatically.",
   "repository": {
     "type": "git",
@@ -21,16 +21,16 @@
     "url": "https://github.com/webBoxio/atom-color/issues"
   },
   "homepage": "https://github.com/webBoxio/atom-color",
-  "_id": "webbox-color@0.5.7",
-  "_shasum": "586843002cde8f99f773feaef54b52a8c04e3986",
-  "_resolved": "file:../d-115427-90067-1n62x0l/package.tgz",
-  "_from": "../d-115427-90067-1n62x0l/package.tgz",
+  "_id": "webbox-color@0.5.8",
+  "_shasum": "6a1dd86170b632d2dd63d5b0444aea60837c3b3d",
+  "_resolved": "file:../d-115718-22981-qoykp/package.tgz",
+  "_from": "../d-115718-22981-qoykp/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "atom-space-pen-views",
-        "version": "2.0.5",
+        "version": "2.1.0",
         "path": "node_modules/atom-space-pen-views/lib/main.js"
       },
       {
@@ -90,7 +90,7 @@
       },
       {
         "name": "amdefine",
-        "version": "0.1.0",
+        "version": "1.0.0",
         "path": "node_modules/atom-space-pen-views/node_modules/space-pen/node_modules/grim/node_modules/coffeestack/node_modules/source-map/node_modules/amdefine/amdefine.js"
       },
       {

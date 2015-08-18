@@ -21,15 +21,16 @@ apm install minimap
 
 Below is the list of available plugins so far:
 
+  * [Auto-Hide](https://atom.io/packages/minimap-autohide)
+  * [Bookmarks](https://atom.io/packages/minimap-bookmarks)
+  * [Code Glance](https://atom.io/packages/minimap-codeglance)
   * [Find And Replace](https://atom.io/packages/minimap-find-and-replace)
   * [Git Diff](https://atom.io/packages/minimap-git-diff)
-  * [Color Highlight](https://atom.io/packages/minimap-color-highlight)
+  * [Hide on inactive panes](https://atom.io/packages/minimap-hide)
   * [Highlight Selected](https://atom.io/packages/minimap-highlight-selected)
-  * [Selection](https://atom.io/packages/minimap-selection)
-  * [Bookmarks](https://atom.io/packages/minimap-bookmarks)
-  * [Auto-Hide](https://atom.io/packages/minimap-autohide)
+  * [Linter](https://atom.io/packages/minimap-linter)
   * [Pigments](https://atom.io/packages/minimap-pigments)
-
+  * [Selection](https://atom.io/packages/minimap-selection)
 
 ### Settings
 
@@ -67,11 +68,17 @@ Customizing Key Bindings:
 
 #### Plugin Generation Command
 
-Use the `Minimap: Generate Plugin` command available in the command palette or add a binding to the `minimap:generate-plugin` event:
+Use the `Minimap: Generate Javascript Plugin`, `Minimap: Generate Coffee Plugin` or `Minimap: Generate Babel Plugin` commands, available in the command palette, to generate a new minimap plugin package.
+
+- `Minimap: Generate Javascript Plugin`: Will generate a vanilla JavaScript package.
+- `Minimap: Generate Coffee Plugin`: Will generate a CoffeeScript package.
+- `Minimap: Generate Babel Plugin`: Will generate a ES6 package that uses babel-js.
+
+You can also specify a keybinding for these commands:
 
 ```cson
 'atom-workspace':
-  'ctrl-alt-cmd-m': 'minimap:generate-plugin'
+  'ctrl-alt-cmd-m': 'minimap:generate-plugin-javascript'
 ```
 
 #### Plugins Controls
@@ -141,6 +148,7 @@ Another non-trivial change is the list of available decoration's type. At the ti
 If you want to hide the default editor scrollbar, edit your `style.less` (Open Your Stylesheet) and use the following snippet:
 
 ```css
+atom-text-editor .vertical-scrollbar,
 atom-text-editor::shadow .vertical-scrollbar {
   opacity: 0;
   width: 0;
@@ -152,6 +160,7 @@ atom-text-editor::shadow .vertical-scrollbar {
 ![minimap-custom-background](https://github.com/atom-minimap/minimap/blob/master/minimap-custom-background.png?raw=true)
 
 ```css
+atom-text-editor atom-text-editor-minimap,
 atom-text-editor::shadow atom-text-editor-minimap {
   background: green;
 }
@@ -162,6 +171,7 @@ atom-text-editor::shadow atom-text-editor-minimap {
 ![minimap-custom-background](https://github.com/atom-minimap/minimap/blob/master/minimap-custom-visible-area.png?raw=true)
 
 ```css
+atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area,
 atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area {
   background-color: green;
   opacity: .5;
@@ -173,10 +183,29 @@ atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area 
 ![minimap-custom-background](https://github.com/atom-minimap/minimap/blob/master/minimap-custom-scroll-indicator.png?raw=true)
 
 ```css
+atom-text-editor atom-text-editor-minimap::shadow .minimap-scroll-indicator,
 atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-scroll-indicator {
   background-color: green;
 }
 ```
+
+#### Disabling mouse interactions when in absolute mode
+
+If you want to prevent to catch the mouse pointer when the `absoluteMode` setting is enabled you can use the following snippet to do so:
+
+```css
+atom-text-editor atom-text-editor-minimap,
+atom-text-editor::shadow atom-text-editor-minimap {
+  pointer-events: none;
+}
+
+atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area,
+atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area {
+  pointer-events: auto;
+}
+```
+
+The visible area will still allow interaction but the minimap track won't.
 
 ### Contributing
 

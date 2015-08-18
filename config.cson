@@ -4,6 +4,8 @@
     showIndentGuide: true
     invisibles: {}
     softWrap: true
+    softTabs: true
+    tabLength: 2
   core:
     themes: [
       "atom-dark-ui"
@@ -18,3 +20,5 @@
   emmet: {}
   "webbox-color":
     fillColorAsBackground: false
+  "tree-view":
+    hideIgnoredNames: true
