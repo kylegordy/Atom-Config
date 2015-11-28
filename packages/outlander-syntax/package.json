@@ -1,7 +1,7 @@
 {
   "name": "outlander-syntax",
   "theme": "syntax",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A dark syntax theme from elsewhere",
   "repository": {
     "type": "git",
@@ -17,10 +17,10 @@
     "url": "https://github.com/mthadley/outlander-syntax/issues"
   },
   "homepage": "https://github.com/mthadley/outlander-syntax#readme",
-  "_id": "outlander-syntax@1.0.3",
-  "_shasum": "56692905e890752af0a667b19b3c55b2d1adde3d",
-  "_resolved": "file:../d-11597-17108-1myqdwc/package.tgz",
-  "_from": "../d-11597-17108-1myqdwc/package.tgz",
+  "_id": "outlander-syntax@1.1.0",
+  "_shasum": "9bbf31326f9d5e46101b974164aeea2bd618a6c4",
+  "_resolved": "file:../d-1151028-1524-dygfo0/package.tgz",
+  "_from": "../d-1151028-1524-dygfo0/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],
