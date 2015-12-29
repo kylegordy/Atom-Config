@@ -1,0 +1,325 @@
+diff --git a/assets/sass/base/_typography.scss b/assets/sass/base/_typography.scss
+index 359ee07..3e55c01 100644
+--- a/assets/sass/base/_typography.scss
++++ b/assets/sass/base/_typography.scss
+@@ -1,285 +1,283 @@
++html {
++  font-size: $base-font-size; // This effects the root em (rem)
++}
+ 
+ body {
+   @include font-feature-settings("kern", "liga", "pnum");
+   -webkit-font-smoothing: antialiased;
+   color: $base-font-color;
+   font-family: $base-font-family;
+-  font-size: $base-font-size;
+   line-height: $base-line-height;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   font-size: $base-font-size;
+   line-height: $heading-line-height;
+   font-weight: bold;
+   margin: 0 0 $type-margin-bottom 0;
+ }
+ 
+ h1 {
+-  font-size: rem(30);
++  font-size: rem(22);
+   letter-spacing: -1px;
+   margin-bottom: ($type-margin-bottom * 2);
+ 
+   @include bp($medium-bp) {
+     font-size: rem(40);
+   }
+ 
+   @include bp($large-bp) {
+     font-size: rem(50);
+   }
+ 
+ }
+ 
+ h2 {
+   font-size: rem(24);
+ 
+   @include bp($medium-bp) {
+     font-size: rem(30);
+   }
+ 
+ }
+ 
+ h3 {
+   font-size: rem(18);
+   font-weight: normal;
+ 
+   @include bp($medium-bp) {
+     font-size: rem(22);
+   }
+ 
+ }
+ 
+ .events-and-presentation {
+   h3 + p {
+     margin-top: -10px;
+   }
+ 
+   h3 {
+     font-weight: bold;
+     margin-top: rem(24);
+   }
+ }
+ 
+ h4, h5, h6 {
+   font-size: rem(16);
+   font-weight: bold;
++  line-height: $base-line-height;
+ 
+   @include bp($medium-bp) {
+     font-size: rem(18);
+   }
+ 
+ }
+ 
+ h5 {
+   font-weight: normal;
+   font-style: italic;
+ }
+ 
+ h6 {
+   font-weight: normal;
+   color: $grey;
+ }
+ 
+ address {
+   font-style: normal;
+ }
+ 
++.small {
++  font-size: .9rem;
++}
++
+ p, ul, ol, ul, blockquote {
+-  font-size: rem(15);
++  font-size: rem(12);
+   font-weight: normal;
+   margin: 0 0 $type-margin-bottom 0;
+ 
+   @include bp($medium-bp) {
+     font-size: rem(18);
+   }
+ }
+ 
+ a {
+   color: $blue;
+   text-decoration: none;
+   transition: 0.1s ease-in-out;
+   transition-property: color, border;
+ 
+   &:active,
+   &:focus,
+   &:hover {
+     color: $red;
+   }
+ 
+   &:focus {
+     outline: -webkit-focus-ring-color auto 5px;
+   }
+ 
+   &:active {
+     outline: none;
+   }
+ 
+ }
+ 
++// List
++
+ ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0 0 1em 0;
+-  // list-style-type: square;
+-  // list-style-position: inside;
++}
++// Targets only Uls nested within an article tag
++// Otherwise they get the default UL styles above
++article ul {
++  list-style-type: square;
++  margin-left: 2em;
++
++  li {
++    margin-bottom: .75em;
++  }
++
+ }
+ 
+ ol {
+   padding: 0;
+   margin: 0 0 1em 0;
+ }
+ 
+ ol {
+   display: table;
+   margin-left: 0;
+   padding-left: 0;
+   list-style: none;
+ 
+ 
+   li {
+     display: table-row;
+     counter-increment: table-ol;
+ 
+     &:before {
+       content: counter(table-ol) ".";
+       display: table-cell;
+       padding-right: 0.4em;
+       text-align: right;
+     }
+ 
+   }
+ 
+ }
+ 
+ //  Blockquotes
+ 
+ blockquote {
+-  margin: 3rem 0 3rem 0;
++  margin: 3rem 0 3rem 1rem;
+   padding: 0 0 0 1.5rem;
+   border-left: 6px solid $red;
+ }
+ 
+ .blockquote--box {
+   background-color: $black;
+   color: #fff;
+   padding: 2rem;
+   border: none; // Overide default blockquote styles
+ 
+   p {
+     margin: 0
+   }
+ 
+ }
+ 
+ .blockquote--bracketed {
+   position: relative;
+   color: $blue;
+   font-weight: bold;
+   padding: 2rem;
+   border: none; // Overide default blockquote styles
+ 
+   &:before {
+     top: 0;
+     left: 0;
+     content:"";
+     position: absolute;
+     width: 40px;
+     height: 40px;
+     border-left: 8px solid $red;
+     border-top: 8px solid $red;
+     border-radius: 2.5px;
+   }
+ 
+   &:after {
+     bottom: 0;
+     right: 0;
+     content:"";
+     position: absolute;
+     width: 40px;
+     height: 40px;
+     border-right: 8px solid $blue;
+     border-bottom: 8px solid $blue;
+     border-radius: 2.5px;
+     transform-origin: 0% 100%;
+   }
+ 
+   p {
+     font-weight: bold;
+     margin: 0
+   }
+ 
+ }
+ 
+ // Horizontal Rules
+ 
+ hr {
+-  height: 3px;
++  height: 2px;
+   border: none;
+   background-color: $grey-lt;
++  margin: 2.5rem 0;
++}
++
++hr.col-mb {
++  margin-bottom: 2em;
+ }
+ 
+ .section-divider {
+   max-width: 80px;
+   text-alig: left;
+   height: 6px;
+   border: none;
+   margin: 3rem 0 1rem 0;
+   background-color: $grey;
+ }
+ 
+ .section-divider--green {
+   @extend .section-divider;
+   background-color: $green;
+ }
+ 
+ .section-divider--red {
+   @extend .section-divider;
+   background-color: $red;
+ }
+ 
+-// Breadcrumbs
+-
+-.breadcrumbs {
+-  font-size: rem(18);
+-  font-weight: normal;
+-
+-  a {
+-    color: $grey;
+-  }
+-
+-  a:hover {
+-    color: $blue;
+-  }
+-
+-  li {
+-    display: inline-block;
+-  }
+-
+-  li:after {
+-    content:" /";
+-    display: inline;
+-    color: $grey;
+-  }
+-
+-  li:last-of-type:after {
+-    content: '';
+-  }
+-
+-}
+-
+ // Figures & Figure Captions
+ 
+ figure {
+   margin: 2rem 0;
+   padding: 0;
+ }
+ 
+ figcaption {
+   font-size: rem(15);
+   font-weight: regular;
+ }
++
++.muted-lable {
++  color: $grey;
++  font-size: rem(15);
++}

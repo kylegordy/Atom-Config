@@ -23,3 +23,15 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
+
+
+# Useful keybindings and overrides
+'atom-text-editor':
+  'cmd-k j': 'pane:split-down'
+  'cmd-k k': 'pane:split-up'
+  'cmd-k h': 'pane:split-left'
+  'cmd-k l': 'pane:split-right'
+  'cmd-k cmd-j': 'window:focus-pane-below'
+  'cmd-k cmd-k': 'window:focus-pane-above'
+  'cmd-k cmd-h': 'window:focus-pane-on-left'
+  'cmd-k cmd-l': 'window:focus-pane-on-right'
