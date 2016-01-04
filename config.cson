@@ -6,9 +6,10 @@
     softWrap: true
     tabLength: 2
     showInvisibles: true
+    fontFamily: "'menlo'"
   core:
     themes: [
-      "atom-dark-ui"
+      "outlander-ui"
       "outlander-syntax"
     ]
     ignoredNames: [
