@@ -1,3 +1,22 @@
+<a name="v0.20.0"></a>
+# v0.20.0 (2016-01-20)
+
+## Features
+
+- Add a pigments:report command ([8c29bd7e](https://github.com/abe33/atom-pigments/commit/8c29bd7e3a9f2f0e1bf12db6f5466fb63eb831a0))  <br>It dumps a bunch of pigments related data into a text editor for easy
+  copy paste.
+  Paths from the project directories are redacted to avoid leaking
+  username.
+- Implement support for marker layers when available ([62f0c5fd](https://github.com/abe33/atom-pigments/commit/62f0c5fdce462f4b5807d89689b15479dd6176d2))
+
+<a name="v0.19.7"></a>
+# v0.19.7 (2016-01-18)
+
+## Bug Fixes
+
+- Prevent rendering of marker without color ([6e7947a1](https://github.com/abe33/atom-pigments/commit/6e7947a1c833dbc7b11f7c1027a52f3d4b3c0cb8), [#108](https://github.com/abe33/atom-pigments/issues/108))
+- Fix filtering on marker with no colors ([14d15534](https://github.com/abe33/atom-pigments/commit/14d1553446d47a30116ba725ac990ccfec38431f), [#129](https://github.com/abe33/atom-pigments/issues/129))
+
 <a name="v0.19.6"></a>
 # v0.19.6 (2016-01-11)
 
