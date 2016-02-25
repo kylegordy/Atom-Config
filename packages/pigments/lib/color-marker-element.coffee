@@ -1,5 +1,5 @@
 {CompositeDisposable, Emitter} = require 'atom'
-{registerOrUpdateElement} = require 'atom-utils'
+{registerOrUpdateElement, EventsDelegation} = require 'atom-utils'
 
 SPEC_MODE = atom.inSpecMode()
 RENDERERS =
@@ -10,6 +10,8 @@ RENDERERS =
   'square-dot': require './renderers/square-dot'
 
 class ColorMarkerElement extends HTMLElement
+  EventsDelegation.includeInto(this)
+
   renderer: new RENDERERS.background
 
   createdCallback: ->
@@ -38,6 +40,14 @@ class ColorMarkerElement extends HTMLElement
 
     @subscriptions.add atom.config.observe 'pigments.markerType', (type) =>
       @bufferElement.requestMarkerUpdate([this]) unless type is 'gutter'
+
+    @subscriptions.add @subscribeTo this,
+      click: (e) =>
+        colorBuffer = @colorMarker.colorBuffer
+
+        return unless colorBuffer?
+
+        colorBuffer.selectColorMarkerAndOpenPicker(@colorMarker)
 
     @render()
 

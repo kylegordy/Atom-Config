@@ -31,6 +31,14 @@ module.exports =
       description: "Glob patterns of files to ignore when scanning the project for variables."
       items:
         type: 'string'
+
+    ignoredBufferNames:
+      type: 'array'
+      default: []
+      description: "Glob patterns of files that won't get any colors highlighted"
+      items:
+        type: 'string'
+
     extendedSearchNames:
       type: 'array'
       default: ['**/*.css']
@@ -61,6 +69,10 @@ module.exports =
       type: 'boolean'
       default: false
       description: 'When enabled, the autocomplete provider will also provides completion for non-color variables.'
+    extendAutocompleteToColorValue:
+      type: 'boolean'
+      default: false
+      description: 'When enabled, the autocomplete provider will also provides color value.'
     markerType:
       type: 'string'
       default: 'background'
@@ -128,8 +140,8 @@ module.exports =
       return unless protocol is 'pigments:'
 
       switch host
-        when 'search' then atom.views.getView(@project.findAllColors())
-        when 'palette' then atom.views.getView(@project.getPalette())
+        when 'search' then @project.findAllColors()
+        when 'palette' then @project.getPalette()
         when 'settings' then atom.views.getView(@project)
 
     atom.contextMenu.add
@@ -153,6 +165,12 @@ module.exports =
   provideAPI: ->
     PigmentsAPI ?= require './pigments-api'
     new PigmentsAPI(@getProject())
+
+  consumeColorPicker: (api) ->
+    @getProject().setColorPickerAPI(api)
+
+    new Disposable =>
+      @getProject().setColorPickerAPI(null)
 
   consumeColorExpressions: (options={}) ->
     registry = @getProject().getColorExpressionsRegistry()
@@ -272,7 +290,10 @@ module.exports =
     ColorProjectElement.registerViewProvider(ColorProject)
     PaletteElement.registerViewProvider(Palette)
 
+    atom.deserializers.add(Palette)
+    atom.deserializers.add(ColorSearch)
     atom.deserializers.add(ColorProject)
+    atom.deserializers.add(ColorProjectElement)
     atom.deserializers.add(VariablesCollection)
 
 module.exports.loadDeserializersAndRegisterViews()

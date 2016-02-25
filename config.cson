@@ -1,34 +1,34 @@
 "*":
-  editor:
-    lineHeight: 1.55
-    showIndentGuide: true
-    invisibles: {}
-    softWrap: true
-    tabLength: 2
-    showInvisibles: true
-    fontFamily: "'menlo'"
   core:
-    themes: [
-      "outlander-ui"
-      "outlander-syntax"
+    disabledPackages: [
+      "minimap"
     ]
     ignoredNames: [
       ".sass-cache"
       ".DS_Store"
       "node_modules"
     ]
-    disabledPackages: [
-      "minimap"
+    themes: [
+      "outlander-ui"
+      "outlander-syntax"
     ]
+  editor:
+    fontFamily: "'menlo'"
+    invisibles: {}
+    lineHeight: 1.6
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    tabLength: 2
+  emmet: {}
   "exception-reporting":
     userId: "4ff6a64d-7478-97d6-028f-cb85011b20fa"
+  minimap: {}
+  "tree-view":
+    hideIgnoredNames: true
+  "webbox-color":
+    fillColorAsBackground: false
   welcome:
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
-  emmet: {}
-  "webbox-color":
-    fillColorAsBackground: false
-  "tree-view":
-    hideIgnoredNames: true
-  minimap: {}

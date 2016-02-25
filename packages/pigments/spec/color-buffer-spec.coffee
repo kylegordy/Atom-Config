@@ -25,6 +25,7 @@ describe 'ColorBuffer', ->
 
   beforeEach ->
     atom.config.set 'pigments.delayBeforeScan', 0
+    atom.config.set 'pigments.ignoredBufferNames', []
     atom.config.set 'pigments.sourceNames', [
       '*.styl'
       '*.less'
@@ -35,15 +36,84 @@ describe 'ColorBuffer', ->
     waitsForPromise ->
       atom.workspace.open('four-variables.styl').then (o) -> editor = o
 
-    waitsForPromise -> atom.packages.activatePackage('pigments').then (pkg) ->
-      pigments = pkg.mainModule
-      project = pigments.getProject()
+    waitsForPromise ->
+      atom.packages.activatePackage('pigments').then (pkg) ->
+        pigments = pkg.mainModule
+        project = pigments.getProject()
+      .catch (err) -> console.error err
 
   afterEach ->
     colorBuffer?.destroy()
 
   it 'creates a color buffer for each editor in the workspace', ->
     expect(project.colorBuffersByEditorId[editor.id]).toBeDefined()
+
+  describe 'when the file path matches an entry in ignoredBufferNames', ->
+    beforeEach ->
+      expect(project.hasColorBufferForEditor(editor)).toBeTruthy()
+
+      atom.config.set 'pigments.ignoredBufferNames', ['**/*.styl']
+
+    it 'destroys the color buffer for this file', ->
+      expect(project.hasColorBufferForEditor(editor)).toBeFalsy()
+
+    it 'recreates the color buffer when the settings no longer ignore the file', ->
+      expect(project.hasColorBufferForEditor(editor)).toBeFalsy()
+
+      atom.config.set 'pigments.ignoredBufferNames', []
+
+      expect(project.hasColorBufferForEditor(editor)).toBeTruthy()
+
+    it 'prevents the creation of a new color buffer', ->
+      waitsForPromise ->
+        atom.workspace.open('variables.styl').then (o) -> editor = o
+
+      runs ->
+        expect(project.hasColorBufferForEditor(editor)).toBeFalsy()
+
+  describe 'when an editor with a path is not in the project paths is opened', ->
+    beforeEach ->
+      waitsFor -> project.getPaths()?
+
+    describe 'when the file is already saved on disk', ->
+      pathToOpen = null
+
+      beforeEach ->
+        pathToOpen = project.paths.shift()
+
+      it 'adds the path to the project immediately', ->
+        spyOn(project, 'appendPath')
+
+        waitsForPromise ->
+          atom.workspace.open(pathToOpen).then (o) ->
+            editor = o
+            colorBuffer = project.colorBufferForEditor(editor)
+
+        runs ->
+          expect(project.appendPath).toHaveBeenCalledWith(pathToOpen)
+
+
+    describe 'when the file is not yet saved on disk', ->
+      beforeEach ->
+        waitsForPromise ->
+          atom.workspace.open('foo-de-fafa.styl').then (o) ->
+            editor = o
+            colorBuffer = project.colorBufferForEditor(editor)
+
+        waitsForPromise -> colorBuffer.variablesAvailable()
+
+      it 'does not fails when updating the colorBuffer', ->
+        expect(-> colorBuffer.update()).not.toThrow()
+
+      it 'adds the path to the project paths on save', ->
+        spyOn(colorBuffer, 'update').andCallThrough()
+        spyOn(project, 'appendPath')
+        editor.getBuffer().emitter.emit 'did-save', path: editor.getPath()
+
+        waitsFor -> colorBuffer.update.callCount > 0
+
+        runs ->
+          expect(project.appendPath).toHaveBeenCalledWith(editor.getPath())
 
   describe 'when an editor without path is opened', ->
     beforeEach ->
@@ -348,6 +418,21 @@ describe 'ColorBuffer', ->
 
       it 'does not renders colors from variables', ->
         expect(colorBuffer.getColorMarkers().length).toEqual(4)
+
+
+    describe 'with a buffer in crlf mode', ->
+      beforeEach ->
+        waitsForPromise ->
+          atom.workspace.open('crlf.styl').then (o) ->
+            editor = o
+
+        runs ->
+          colorBuffer = project.colorBufferForEditor(editor)
+
+        waitsForPromise -> colorBuffer.variablesAvailable()
+
+      it 'creates a marker for each colors', ->
+        expect(colorBuffer.getValidColorMarkers().length).toEqual(2)
 
   ##    ####  ######   ##    ##  #######  ########  ######## ########
   ##     ##  ##    ##  ###   ## ##     ## ##     ## ##       ##     ##
