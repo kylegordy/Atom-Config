@@ -1,6 +1,6 @@
 {
   "name": "jshint",
-  "version": "1.8.3",
+  "version": "1.8.5",
   "description": "Validate JavaScript with JSHint. In realtime or on save. Supports JSX (React).",
   "license": "MIT",
   "repository": {
@@ -59,22 +59,22 @@
       "fixture*"
     ]
   },
-  "readme": "# JSHint\n\n> Validate JavaScript with [JSHint](http://jshint.com)\n\n![](https://cloud.githubusercontent.com/assets/170270/3834266/54ad6b1c-1daf-11e4-9c46-98e6e4abab07.png)\n\n\n## Install\n\n```\n$ apm install jshint\n```\n\nOr Settings → Install → Search for `jshint` *(install `Jshint`, not `Atom Jshint`)*\n\n\n## Features\n\n- Validates in realtime.\n- Line and line number turns red on error.\n- Hover over the line number to see the errors.\n- Displays the error from the current line or the first error in the statusbar; clicking the statusbar message moves the cursor to the error.\n- Reads your `.jshintrc` config and `jshintConfig` in package.json using the same logic as JSHint.\n- Option to only validate on save.\n- Command `Jshint: Lint` to manually lint.\n- Command `Jshint: Go To Next Error` to move the cursor to the next error in the current editor.\n- Command `Jshint: Go To Error` to move the cursor to the error displayed in the statusbar.\n- Supports [React JSX](http://facebook.github.io/react/docs/jsx-in-depth.html). *(must be enabled in Settings)*\n\n\n## License\n\nMIT © [Sindre Sorhus](http://sindresorhus.com)\n",
+  "readme": "# Deprecated\n\nI failed to [find an active maintainer](https://github.com/sindresorhus/atom-jshint/issues/141). See [linter-jshint](https://github.com/AtomLinter/linter-jshint) for an alternative. However, I would strongly recommend trying out [ESLint](http://eslint.org) ([Atom plugin](https://github.com/AtomLinter/linter-eslint)) instead. It's just so much better than JSHint. [XO](https://github.com/sindresorhus/xo) ([Atom plugin](https://github.com/sindresorhus/atom-linter-xo)), which is an ESLint wrapper with sensible defaults, is also a good choice.\n\n---\n\n# JSHint\n\n> Validate JavaScript with [JSHint](http://jshint.com)\n\n![](https://cloud.githubusercontent.com/assets/170270/3834266/54ad6b1c-1daf-11e4-9c46-98e6e4abab07.png)\n\n\n## Install\n\n```\n$ apm install jshint\n```\n\nOr Settings → Install → Search for `jshint` *(install `Jshint`, not `Atom Jshint`)*\n\n\n## Features\n\n- Validates in realtime.\n- Line and line number turns red on error.\n- Hover over the line number to see the errors.\n- Displays the error from the current line or the first error in the statusbar; clicking the statusbar message moves the cursor to the error.\n- Reads your `.jshintrc` config and `jshintConfig` in package.json using the same logic as JSHint.\n- Option to only validate on save.\n- Command `Jshint: Lint` to manually lint.\n- Command `Jshint: Go To Next Error` to move the cursor to the next error in the current editor.\n- Command `Jshint: Go To Error` to move the cursor to the error displayed in the statusbar.\n- Supports [React JSX](http://facebook.github.io/react/docs/jsx-in-depth.html). *(must be enabled in Settings)*\n\n\n## License\n\nMIT © [Sindre Sorhus](https://sindresorhus.com)\n",
   "readmeFilename": "readme.md",
   "bugs": {
     "url": "https://github.com/sindresorhus/atom-jshint/issues"
   },
   "homepage": "https://github.com/sindresorhus/atom-jshint#readme",
-  "_id": "jshint@1.8.3",
-  "_shasum": "7cdf6bf5fa14aaa94f3d432329a0773c092bbd89",
-  "_resolved": "file:../d-1151028-1504-1wu8cs5/package.tgz",
-  "_from": "../d-1151028-1504-1wu8cs5/package.tgz",
+  "_id": "jshint@1.8.5",
+  "_shasum": "bae7155ba596b50d32ca16796c2196eb282fdaa5",
+  "_resolved": "file:../d-116311-68766-1ydyg2u/package.tgz",
+  "_from": "../d-116311-68766-1ydyg2u/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "event-kit",
-        "version": "1.4.1",
+        "version": "1.5.0",
         "path": "node_modules/event-kit/lib/event-kit.js"
       },
       {
@@ -99,7 +99,7 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.8",
+        "version": "0.10.11",
         "path": "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/index.js"
       },
       {
@@ -109,7 +109,7 @@
       },
       {
         "name": "es6-symbol",
-        "version": "3.0.1",
+        "version": "3.0.2",
         "path": "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/index.js"
       },
       {
@@ -144,7 +144,7 @@
       },
       {
         "name": "jshint",
-        "version": "2.8.0",
+        "version": "2.9.1",
         "path": "node_modules/jshint/src/jshint.js"
       },
       {
@@ -269,7 +269,7 @@
       },
       {
         "name": "brace-expansion",
-        "version": "1.1.2",
+        "version": "1.1.3",
         "path": "node_modules/jshint/node_modules/minimatch/node_modules/brace-expansion/index.js"
       },
       {
@@ -359,7 +359,7 @@
       },
       {
         "name": "brace-expansion",
-        "version": "1.1.2",
+        "version": "1.1.3",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js"
       },
       {
@@ -389,7 +389,7 @@
       },
       {
         "name": "graceful-fs",
-        "version": "4.1.2",
+        "version": "4.1.3",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/graceful-fs/graceful-fs.js"
       },
       {
@@ -419,12 +419,12 @@
       },
       {
         "name": "recast",
-        "version": "0.10.39",
+        "version": "0.10.43",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/main.js"
       },
       {
         "name": "ast-types",
-        "version": "0.8.12",
+        "version": "0.8.15",
         "path": "node_modules/jshint-jsx/node_modules/react-tools/node_modules/commoner/node_modules/recast/node_modules/ast-types/main.js"
       },
       {
@@ -787,6 +787,8 @@
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/copy.js",
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/count.js",
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/create.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/ensure-natural-number-value.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/ensure-natural-number.js",
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/eq.js",
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/every.js",
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/filter.js",
@@ -802,6 +804,7 @@
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/is-copy-deep.js",
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/is-copy.js",
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/is-empty.js",
+        "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/is-number-value.js",
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/is-object.js",
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/is-plain-object.js",
         "node_modules/event-kit/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/object/is.js",
@@ -1462,6 +1465,7 @@
         "node_modules/jshint/src/reporters/jslint_xml.js",
         "node_modules/jshint/src/reporters/non_error.js",
         "node_modules/jshint/src/reporters/unix.js",
+        "node_modules/jshint/src/scope-manager.js",
         "node_modules/jshint/src/state.js",
         "node_modules/jshint/src/style.js",
         "node_modules/jshint/src/vars.js",
@@ -2713,7 +2717,7 @@
         ],
         "dependencies": {
           "es6-iterator": "2",
-          "es6-symbol": "3"
+          "es6-symbol": "~3.0.2"
         }
       },
       {
@@ -2736,7 +2740,7 @@
         ],
         "dependencies": {
           "d": "~0.1.1",
-          "es5-ext": "~0.10.8"
+          "es5-ext": "~0.10.10"
         }
       },
       {
@@ -3080,7 +3084,7 @@
           "esprima-fb": "~15001.1001.0-dev-harmony-fb",
           "source-map": "~0.5.0",
           "private": "~0.1.5",
-          "ast-types": "0.8.12"
+          "ast-types": "0.8.15"
         }
       },
       {

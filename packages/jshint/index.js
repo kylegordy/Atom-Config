@@ -157,9 +157,7 @@ const goToNextError = () => {
 	}
 };
 
-const getReasonsForError = error => {
-	return _.map(error, el => `${el.character}: ${el.reason} (${el.code})`);
-};
+const getReasonsForError = err => _.map(err, el => `${el.character}: ${el.reason} (${el.code})`);
 
 const addReasons = (editor, marker, error) => {
 	const row = getRowForError(error);
@@ -347,4 +345,6 @@ export const deactivate = () => {
 	subscriptionMain.dispose();
 };
 
-export const consumeStatusBar = instance => statusBar = instance;
+export const consumeStatusBar = instance => {
+	statusBar = instance;
+};

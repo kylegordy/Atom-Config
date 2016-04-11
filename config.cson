@@ -20,6 +20,7 @@
     showInvisibles: true
     softWrap: true
     tabLength: 2
+    tabType: "soft"
   emmet: {}
   "exception-reporting":
     userId: "4ff6a64d-7478-97d6-028f-cb85011b20fa"
