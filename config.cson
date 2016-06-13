@@ -2,6 +2,7 @@
   core:
     disabledPackages: [
       "minimap"
+      "activate-power-mode"
     ]
     ignoredNames: [
       ".sass-cache"
