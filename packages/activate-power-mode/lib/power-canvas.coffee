@@ -26,7 +26,7 @@ module.exports =
       @context = @canvas.getContext "2d"
       @canvas.classList.add "power-mode-canvas"
 
-    editorElement.parentNode.appendChild @canvas
+    (editorElement.shadowRoot ? editorElement).appendChild @canvas
     @canvas.style.display = "block"
     @editorElement = editorElement
     @editor = editor
@@ -40,18 +40,20 @@ module.exports =
     left += cursorOffset.left - @editorElement.getScrollLeft()
     top += cursorOffset.top - @editorElement.getScrollTop()
 
-    color = @getColorAtPosition left, top
+    color = @getColorAtPosition [screenPosition.row, screenPosition.column - 1]
     numParticles = random @getConfig("spawnCount.min"), @getConfig("spawnCount.max")
     while numParticles--
       @particles[@particlePointer] = @createParticle left, top, color
       @particlePointer = (@particlePointer + 1) % @getConfig("totalCount.max")
 
-  getColorAtPosition: (left, top) ->
-    offset = @editorElement.getBoundingClientRect()
-    el = (@editorElement.shadowRoot ? document).elementFromPoint(
-      left + offset.left - 3
-      top + offset.top
-    )
+  getColorAtPosition: (screenPosition) ->
+    bufferPosition = @editor.bufferPositionForScreenPosition screenPosition
+    scope = @editor.scopeDescriptorForBufferPosition bufferPosition
+
+    try
+      el = (@editorElement.shadowRoot ? @editorElement).querySelector scope.toString()
+    catch error
+      "rgb(255, 255, 255)"
 
     if el
       getComputedStyle(el).color
