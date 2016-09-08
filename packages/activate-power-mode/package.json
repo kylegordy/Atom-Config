@@ -1,7 +1,7 @@
 {
   "name": "activate-power-mode",
   "main": "./lib/activate-power-mode",
-  "version": "0.7.3",
+  "version": "0.8.1",
   "description": "Activate POWER MODE to write your code in style.",
   "keywords": [],
   "repository": {
@@ -27,21 +27,21 @@
     "url": "https://github.com/JoelBesada/activate-power-mode/issues"
   },
   "homepage": "https://github.com/JoelBesada/activate-power-mode#readme",
-  "_id": "activate-power-mode@0.7.3",
-  "_shasum": "49285e6ca618def9bcb1842e0f72e93b5ea9c438",
-  "_resolved": "file:../d-116710-46904-140tw7/package.tgz",
-  "_from": "../d-116710-46904-140tw7/package.tgz",
+  "_id": "activate-power-mode@0.8.1",
+  "_shasum": "0417a4035240d8a79ccaa8b5f7d49d813dc6ecb3",
+  "_resolved": "file:../d-11687-10714-nb7tv/package.tgz",
+  "_from": "../d-11687-10714-nb7tv/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "lodash.random",
-        "version": "3.1.7",
+        "version": "3.2.0",
         "path": "node_modules/lodash.random/index.js"
       },
       {
         "name": "lodash.throttle",
-        "version": "4.1.0",
+        "version": "4.1.1",
         "path": "node_modules/lodash.throttle/index.js"
       }
     ],

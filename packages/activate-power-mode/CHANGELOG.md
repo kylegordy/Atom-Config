@@ -1,3 +1,13 @@
+### 0.8.1 2016-08-25
+* Fix error on untitled files
+
+### 0.8.0 2016-08-24
+* Exclude file types feature
+* Add enable/disable commands
+
+### 0.7.4 2016-08-10
+* Fix when canvas has no parent
+
 ### 0.7.3 2016-08-06
 * Fix when scope descriptor is a invalid selector
 * Uses more specific selectors
