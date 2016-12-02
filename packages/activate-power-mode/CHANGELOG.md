@@ -1,3 +1,20 @@
+### 1.1.0 2016-10-26
+* Saves max streak
+
+### 1.0.2 2016-10-05
+* Fix combo font
+
+### 1.0.1 2016-10-05
+* Audio disabled by default
+
+### 1.0.0 2016-10-05
+* Audio on keystroke
+* Combo mode, **if enabled effects won't appear until reach the activation threshold**.
+
+### 0.9.0 2016-09-19
+* Random colours setting
+* Fixed colour setting
+
 ### 0.8.1 2016-08-25
 * Fix error on untitled files
 
