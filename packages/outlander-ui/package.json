@@ -1,39 +1,61 @@
 {
-  "name": "outlander-ui",
-  "theme": "ui",
-  "version": "1.3.1",
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-7thpto/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-7thpto/package.tgz",
+        "spec": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-7thpto/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/apm-install-dir-117111-16010-1w1uawj"
+    ]
+  ],
+  "_from": "../d-117111-16010-7thpto/package.tgz",
+  "_id": "outlander-ui@1.4.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/outlander-ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-7thpto/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-7thpto/package.tgz",
+    "spec": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-7thpto/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117111-16010-7thpto/package.tgz",
+  "_shasum": "2ff0bcb06cc816307db2f6859f85cdec96da80c2",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-7thpto/package.tgz",
+  "_where": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/apm-install-dir-117111-16010-1w1uawj",
+  "bugs": {
+    "url": "https://github.com/mthadley/outlander-ui/issues"
+  },
+  "dependencies": {},
   "description": "A dark flat theme from elsewhere",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">0.40.0"
+  },
+  "homepage": "https://github.com/mthadley/outlander-ui#readme",
   "license": "MIT",
-  "main": "lib/outlander",
+  "main": "lib/main",
+  "name": "outlander-ui",
+  "optionalDependencies": {},
+  "readme": "# Outlander\n\n[![Build Status](https://travis-ci.org/mthadley/outlander-ui.svg?branch=master)](https://travis-ci.org/mthadley/outlander-ui)\n\nOutlander is a dark, flat UI theme for [Atom](https://atom.io/).\n\n![screenshot.png](https://raw.githubusercontent.com/mthadley/outlander-ui/master/screenshot.png)\n\nBest used with [Outlander-Syntax](https://github.com/mthadley/outlander-syntax).\n\n## Installation\nRun the following in a terminal:\n```sh\n$ apm install outlander-ui outlander-syntax\n```\nAlternatively, the theme can be installed from the settings menu at **_preferences -> themes_**, from where the theme itself can also be applied.\n\n## Credits\n* Outlander colors based on the [Tomorrow-Night-Eighties](https://github.com/ChrisKempson/Tomorrow-Theme) color scheme by @chriskempson\n\n### Inspiration\n\n* Its no coincidence that Outlander plays nice with [Numix](https://numixproject.org/)\n* [Light Table](http://www.lighttable.com/)\n\n### Contributing\n\nFeel free to open issues, make suggestions, and create pull requests. If it's a bug or a style tweak thats fits with outlander's aesthetic, it will probably make it in.\n",
+  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mthadley/outlander-ui.git"
   },
-  "engines": {
-    "atom": ">0.40.0"
-  },
-  "readme": "# Outlander\n\nOutlander is a dark, flat UI theme for [Atom](https://atom.io/).\n\n![screenshot.png](https://raw.githubusercontent.com/mthadley/outlander-ui/master/screenshot.png)\n\nBest used with [Outlander-Syntax](https://github.com/mthadley/outlander-syntax).\n\n## Installation\nRun the following in a terminal:\n```sh\n$ apm install outlander-ui outlander-syntax\n```\nAlternatively, the theme can be installed from the settings menu at **_preferences -> themes_**, from where the theme itself can also be applied.\n\n## Credits\n* Outlander colors based on the [Tomorrow-Night-Eighties](https://github.com/ChrisKempson/Tomorrow-Theme) color scheme by @chriskempson\n\n### Inspiration\n\n* Its no coincidence that Outlander plays nice with [Numix](https://numixproject.org/)\n* [Light Table](http://www.lighttable.com/)\n\n### Contributing\n\nFeel free to open issues, make suggestions, and create pull requests. If it's a bug or a style tweak thats fits with outlander's aesthetic, it will probably make it in.\n",
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/mthadley/outlander-ui/issues"
-  },
-  "homepage": "https://github.com/mthadley/outlander-ui#readme",
-  "_id": "outlander-ui@1.3.1",
-  "_shasum": "567fc1404b8bde81bf3b0196cf4fc82565806adb",
-  "_resolved": "file:../d-116626-1577-a65gwr/package.tgz",
-  "_from": "../d-116626-1577-a65gwr/package.tgz",
-  "_atomModuleCache": {
-    "version": 1,
-    "dependencies": [],
-    "extensions": {
-      ".coffee": [
-        "lib/ModalHandler.coffee",
-        "lib/outlander.coffee"
-      ],
-      ".json": [
-        "package.json"
-      ]
-    },
-    "folders": []
-  }
+  "theme": "ui",
+  "version": "1.4.0"
 }

@@ -1,34 +1,60 @@
 {
-  "name": "outlander-syntax",
-  "theme": "syntax",
-  "version": "1.1.0",
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-2w91qh/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-2w91qh/package.tgz",
+        "spec": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-2w91qh/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/apm-install-dir-117111-16010-1y33yov"
+    ]
+  ],
+  "_from": "../d-117111-16010-2w91qh/package.tgz",
+  "_id": "outlander-syntax@2.0.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/outlander-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-2w91qh/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-2w91qh/package.tgz",
+    "spec": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-2w91qh/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117111-16010-2w91qh/package.tgz",
+  "_shasum": "704baab529a1289324ceeae2288aadc2db5f2a74",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/d-117111-16010-2w91qh/package.tgz",
+  "_where": "/private/var/folders/jc/97fd42kj1mv3nvdz62df1mqm0000gn/T/apm-install-dir-117111-16010-1y33yov",
+  "bugs": {
+    "url": "https://github.com/mthadley/outlander-syntax/issues"
+  },
+  "dependencies": {},
   "description": "A dark syntax theme from elsewhere",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.13.0"
+  },
+  "homepage": "https://github.com/mthadley/outlander-syntax#readme",
+  "license": "MIT",
+  "name": "outlander-syntax",
+  "optionalDependencies": {},
+  "readme": "# Outlander Syntax\n\nOutlander is a syntax theme for [Atom](https://atom.io/). This theme is an almost clone of the [Tomorrow Night Eighties](https://github.com/ChrisKempson/Tomorrow-Theme) color scheme by @chriskempson, save for a few tweaks to keep it inline with [Outlander-ui](https://github.com/mthadley/outlander-UI).\n\n![Screenshot](https://raw.githubusercontent.com/mthadley/outlander-syntax/master/screenshot.png)\n",
+  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mthadley/outlander-syntax.git"
   },
-  "license": "MIT",
-  "engines": {
-    "atom": ">0.50.0"
-  },
-  "readme": "# Outlander Syntax\n\nOutlander is a syntax theme for [Atom](https://atom.io/). This theme is an almost clone of the [Tomorrow Night Eighties](https://github.com/ChrisKempson/Tomorrow-Theme) color scheme by @chriskempson, save for a few tweaks to keep it inline with [Outlander-ui](https://github.com/mthadley/outlander-UI).\n\n![Screenshot](https://raw.githubusercontent.com/mthadley/outlander-syntax/master/screenshot.png)\n",
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/mthadley/outlander-syntax/issues"
-  },
-  "homepage": "https://github.com/mthadley/outlander-syntax#readme",
-  "_id": "outlander-syntax@1.1.0",
-  "_shasum": "9bbf31326f9d5e46101b974164aeea2bd618a6c4",
-  "_resolved": "file:../d-1151028-1524-dygfo0/package.tgz",
-  "_from": "../d-1151028-1524-dygfo0/package.tgz",
-  "_atomModuleCache": {
-    "version": 1,
-    "dependencies": [],
-    "extensions": {
-      ".json": [
-        "package.json"
-      ]
-    },
-    "folders": []
-  }
+  "theme": "syntax",
+  "version": "2.0.0"
 }
