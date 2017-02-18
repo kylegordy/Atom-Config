@@ -3,6 +3,7 @@
     disabledPackages: [
       "minimap"
       "activate-power-mode"
+      "jshint"
     ]
     ignoredNames: [
       ".sass-cache"
