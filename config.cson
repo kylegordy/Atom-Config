@@ -1,10 +1,5 @@
 "*":
   core:
-    disabledPackages: [
-      "minimap"
-      "activate-power-mode"
-      "jshint"
-    ]
     ignoredNames: [
       ".sass-cache"
       ".DS_Store"
@@ -12,22 +7,24 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "outlander-ui"
+      "one-dark-ui"
       "outlander-syntax"
     ]
+    useCustomTitleBar: true
   editor:
+    autoIndentOnPaste: false
     fontFamily: "'menlo'"
     invisibles: {}
     lineHeight: 1.6
-    showIndentGuide: true
     showInvisibles: true
-    softWrap: true
     tabLength: 2
     tabType: "soft"
   emmet: {}
   "exception-reporting":
     userId: "4ff6a64d-7478-97d6-028f-cb85011b20fa"
   minimap: {}
+  "one-dark-ui":
+    layoutMode: "Compact"
   "tree-view":
     hideIgnoredNames: true
   "webbox-color":
