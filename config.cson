@@ -17,6 +17,7 @@
     invisibles: {}
     lineHeight: 1.6
     showInvisibles: true
+    softWrap: true
     tabLength: 2
     tabType: "soft"
   emmet: {}
