@@ -10,7 +10,7 @@
       "one-dark-ui"
       "outlander-syntax"
     ]
-    useCustomTitleBar: true
+    titleBar: "custom"
   editor:
     autoIndentOnPaste: false
     fontFamily: "'menlo'"
@@ -24,8 +24,7 @@
   "exception-reporting":
     userId: "4ff6a64d-7478-97d6-028f-cb85011b20fa"
   minimap: {}
-  "one-dark-ui":
-    layoutMode: "Compact"
+  "one-dark-ui": {}
   "tree-view":
     hideIgnoredNames: true
   "webbox-color":
